@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 J.Sterling U1276062. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Deck.h"
 
-@interface PlayingCardDeck : NSObject
+@interface PlayingCardDeck : Deck
 
 @end
