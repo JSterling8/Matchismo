@@ -7,14 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "PlayingCardDeck.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
+@property (nonatomic) Deck* deck;
 
 @end
 
 @implementation ViewController
+
+
 
 - (void) setFlipCount:(int)flipCount{
     _flipCount = flipCount;
@@ -22,8 +26,12 @@
 }
 
 - (IBAction)flipCard:(UIButton *)sender {
-    sender.selected = !sender.isSelected;
     
+    PlayingCardDeck *deck = [[PlayingCardDeck alloc] init];
+    deck = [[PlayingCardDeck alloc] init];
+
+    sender.selected = !sender.isSelected;
+    [sender setTitle:@[deck.drawRandomCard.contents] forState:UIControlStateSelected];
     self.flipCount++;
 }
 
