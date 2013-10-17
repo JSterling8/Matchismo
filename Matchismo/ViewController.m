@@ -8,28 +8,38 @@
 
 #import "ViewController.h"
 #import "PlayingCardDeck.h"
+#import "CardMatchingGame.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-@property (strong, nonatomic) Deck *deck;
+@property (strong, nonatomic) CardMatchingGame *game;
 
 @end
 
 @implementation ViewController
 
-- (Deck *)deck
-{
-    if (!_deck) _deck = [[PlayingCardDeck alloc] init];
-    return _deck;
+- (CardMatchingGame *)game{
+    if (_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
+                                                         usingDeck:[[PlayingCardDeck alloc] init]];
+    
+    return _game;
 }
+
+
 
 - (void) setCardButtons:(NSArray *)cardButtons{
     _cardButtons = cardButtons;
+    [self updateUI];
+}
+
+- (void)updateUI{
     for (UIButton *cardButton in self.cardButtons){
-        Card *card = [self.deck drawRandomCard];
+        Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
+        cardButton.selected = card.isFaceUp;
+        cardButton.enabled = !card.isUnplayable;
     }
 }
 
@@ -40,12 +50,9 @@
 }
 
 - (IBAction)flipCard:(UIButton *)sender {
-    
-    PlayingCardDeck *deck = [[PlayingCardDeck alloc] init];
-    deck = [[PlayingCardDeck alloc] init];
-
-    sender.selected = !sender.isSelected;
+    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     self.flipCount++;
+    [self updateUI];
 }
 
 
