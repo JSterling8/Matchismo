@@ -12,12 +12,26 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
-@property (nonatomic) Deck* deck;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (strong, nonatomic) Deck *deck;
 
 @end
 
 @implementation ViewController
 
+- (Deck *)deck
+{
+    if (!_deck) _deck = [[PlayingCardDeck alloc] init];
+    return _deck;
+}
+
+- (void) setCardButtons:(NSArray *)cardButtons{
+    _cardButtons = cardButtons;
+    for (UIButton *cardButton in self.cardButtons){
+        Card *card = [self.deck drawRandomCard];
+        [cardButton setTitle:card.contents forState:UIControlStateSelected];
+    }
+}
 
 
 - (void) setFlipCount:(int)flipCount{
@@ -31,7 +45,6 @@
     deck = [[PlayingCardDeck alloc] init];
 
     sender.selected = !sender.isSelected;
-    [sender setTitle:@[deck.drawRandomCard.contents] forState:UIControlStateSelected];
     self.flipCount++;
 }
 
