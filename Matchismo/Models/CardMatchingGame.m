@@ -15,6 +15,11 @@
 
 @implementation CardMatchingGame
 
+- (id)initWithCardCount:(NSUInteger)count
+              usingDeck:(Deck *)deck{
+    
+    return nil;
+}
 
 - (void)flipCardAtIndex:(NSUInteger)index{
     
@@ -22,6 +27,7 @@
 
 - (Card *)cardAtIndex:(NSUInteger)index{
     
+    return nil;
 }
 
 
