@@ -29,6 +29,8 @@
 		AA3E526A180EC6530072CFCC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3E5269180EC6530072CFCC /* Card.m */; };
 		AA3E5270180EC7090072CFCC /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3E526F180EC7090072CFCC /* PlayingCard.m */; };
 		AA3E5279180EEBBD0072CFCC /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3E5278180EEBBD0072CFCC /* PlayingCardDeck.m */; };
+		AA8CF22018143D7F00F69FD1 /* 3426567435_7d9d476bbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8CF21F18143D7F00F69FD1 /* 3426567435_7d9d476bbe.jpg */; };
+		AA8CF2221814407900F69FD1 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8CF2211814407900F69FD1 /* images.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		AA3E526F180EC7090072CFCC /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Models/PlayingCard.m; sourceTree = "<group>"; };
 		AA3E5277180EEBBD0072CFCC /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Models/PlayingCardDeck.h; sourceTree = "<group>"; };
 		AA3E5278180EEBBD0072CFCC /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Models/PlayingCardDeck.m; sourceTree = "<group>"; };
+		AA8CF21F18143D7F00F69FD1 /* 3426567435_7d9d476bbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3426567435_7d9d476bbe.jpg; path = Resources/3426567435_7d9d476bbe.jpg; sourceTree = "<group>"; };
+		AA8CF2211814407900F69FD1 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = Resources/images.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,8 @@
 		AA8CF21E18143C4300F69FD1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AA8CF2211814407900F69FD1 /* images.jpg */,
+				AA8CF21F18143D7F00F69FD1 /* 3426567435_7d9d476bbe.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -281,6 +287,8 @@
 				AA3E523D180EBF390072CFCC /* Default-568h@2x.png in Resources */,
 				AA3E5240180EBF390072CFCC /* MainStoryboard_iPhone.storyboard in Resources */,
 				AA3E5243180EBF390072CFCC /* MainStoryboard_iPad.storyboard in Resources */,
+				AA8CF22018143D7F00F69FD1 /* 3426567435_7d9d476bbe.jpg in Resources */,
+				AA8CF2221814407900F69FD1 /* images.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
