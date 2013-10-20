@@ -134,6 +134,7 @@
 		AA3E522C180EBF390072CFCC /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
+				AA8CF21E18143C4300F69FD1 /* Resources */,
 				AA3E5264180EC5F80072CFCC /* Models */,
 				AA3E5235180EBF390072CFCC /* AppDelegate.h */,
 				AA3E5236180EBF390072CFCC /* AppDelegate.m */,
@@ -194,6 +195,13 @@
 				AA2CC15E181010070044D50D /* CardMatchingGame.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		AA8CF21E18143C4300F69FD1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
